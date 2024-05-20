@@ -99,7 +99,7 @@ const ChapterIdPage = async ({
                   href={attachment.url}
                   target="_blank"
                   key={attachment.id}
-                  className="flex gap-x-2 items-center p-3 w-full bg-orange/5 border border-orange/40 text-orange/90 rounded-md hover:underline"
+                  className="flex gap-x-2 items-center p-3 w-full bg-blue/5 border border-blue/40 text-blue/90 rounded-md hover:underline"
                 >
                   <File />
                   <p className="line-clamp-1">{attachment.name}</p>

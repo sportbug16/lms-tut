@@ -32,7 +32,7 @@ export const CourseCard = ({
         </figure>
 
         <section className="flex flex-col pt-2">
-          <span className="text-lg md:text-base font-medium group-hover:text-orange/90 transition line-clamp-2">
+          <span className="text-lg md:text-base font-medium group-hover:text-blue/90 transition line-clamp-2">
             {title}
           </span>
 

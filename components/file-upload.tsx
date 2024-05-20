@@ -15,8 +15,8 @@ const FileUpload = ({ onChange, endpoint }: FileUploadProps) => {
     <UploadDropzone
       appearance={{
         button:
-          "ut-uploading:cursor-not-allowed bg-sky-700 cursor-pointer outline-none after:bg-red-400",
-        label: "text-orange hover:text-red-400",
+          "ut-uploading:cursor-not-allowed bg-sky-700 cursor-pointer outline-none after:bg-slate-400",
+        label: "text-black hover:text-black-400",
       }}
       endpoint={endpoint}
       onClientUploadComplete={(res) => {

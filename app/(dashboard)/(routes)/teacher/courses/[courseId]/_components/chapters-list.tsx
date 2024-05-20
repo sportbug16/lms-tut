@@ -77,7 +77,7 @@ export const ChaptersList = ({
                     className={cn(
                       "flex items-center gap-x-2 bg-gray-200 border-gray-200 border text-gray-700 rounded-md mb-4 text-sm",
                       chapter.isPublished &&
-                        "bg-orange/5 border-orange/20 text-orange"
+                        "bg-blue/5 border-blue/20 text-blue"
                     )}
                     ref={provided.innerRef}
                     {...provided.draggableProps}
@@ -86,7 +86,7 @@ export const ChaptersList = ({
                       className={cn(
                         "px-2 py-3 border-r border-r-gray-200 hover:bg-gray-300 rounded-l-md transition",
                         chapter.isPublished &&
-                          "border-r-orange/20 hover:bg-orange-10"
+                          "border-r-blue/20 hover:bg-blue-10"
                       )}
                       {...provided.dragHandleProps}
                     >
@@ -98,7 +98,7 @@ export const ChaptersList = ({
                       <Badge
                         className={cn(
                           "bg-gray-500",
-                          chapter.isPublished && "bg-orange/90"
+                          chapter.isPublished && "bg-blue/90"
                         )}
                       >
                         {chapter.isPublished ? "Published" : "Draft"}
