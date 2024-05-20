@@ -11,6 +11,9 @@ import { Course } from "@prisma/client";
 import Image from "next/image";
 import FileUpload from "@/components/file-upload";
 
+import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+
+
 interface ImageFormProps {
   initialData: Course;
   courseId: string;
@@ -18,7 +21,7 @@ interface ImageFormProps {
 
 const formSchema = z.object({
   imageUrl: z.string().min(1, {
-    message: "imageUrl is required",
+    message: "image is required",
   }),
 });
 
@@ -27,6 +30,7 @@ const ImageForm = ({ initialData, courseId }: ImageFormProps) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const toggleEdit = () => setIsEditing((edit) => !edit);
+
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
@@ -43,7 +47,7 @@ const ImageForm = ({ initialData, courseId }: ImageFormProps) => {
     <div className="mt-6 border bg-gray-100 rounded-md p-4">
       <section className="font-medium flex items-center justify-between">
         Course Image
-        <Button onClick={toggleEdit} variant="secondary">
+        <Button onClick={toggleEdit} variant="default">
           {isEditing && <>Cancel</>}
           {!isEditing && !initialData.imageUrl && (
             <>
